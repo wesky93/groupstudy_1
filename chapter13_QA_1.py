@@ -15,9 +15,9 @@ while True:
     print ('Retrieved',len(data),'characters')
 
     try:
-    	js = json.loads(data.decode('ascii'))
+        js = json.loads(data.decode('ascii'))
     except:
-			js = None
+        js = None
 
     if 'status' not in js or js['status'] != 'OK':
         print ('==== Failure To Retrieve ====')
@@ -26,8 +26,7 @@ while True:
 
     print (json.dumps(js, indent=4))
 
-   
-	
+
 location = js['results'][0]['formatted_address']
 c_code = js['results'][0]['address_components'][-1]['short_name']
 if len(c_code) != 2:
