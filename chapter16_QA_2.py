@@ -27,6 +27,7 @@ def check_dupli(dic):
         if len(val) == 1: continue
         print("file md5 : ",key," file names : ",val)
 
+
 #인자값 선언
 tg_dirname = sys.argv[1]    #첫번째 인자값은 디렉토리명
 tg_extend = sys.argv[2]     #두번째 인자값은 파일 확장자
